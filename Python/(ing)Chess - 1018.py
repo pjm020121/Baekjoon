@@ -28,9 +28,6 @@ while len(chess) > 8:
 
         width = 0
 
-
-
-'''
 while len(chess[i]) > 9:
 
     
@@ -42,7 +39,7 @@ while len(chess[i]) > 9:
     elif height == len(chess[i]) - 2:
 
         height = 0
-'''
+
 
 print(chess)
 
