@@ -18,6 +18,7 @@ for i in range(count):
 for i in range(count):
     for k in range(limit, weight[i] - 1, -1):
         dp[k] = max(dp[k], dp[k - weight[i]] + value[i])
+        print(dp)
 
 print(dp[limit])
 
