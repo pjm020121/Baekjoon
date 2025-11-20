@@ -2,6 +2,7 @@
 
 import sys
 
+'''
 bord = sys.stdin.readline()
 bord = bord.split()
 bord = [int(i) for i in bord]
@@ -30,7 +31,7 @@ while len(chess) > 8:
 
 
 
-'''
+
 while len(chess[i]) > 9:
 
     
@@ -42,13 +43,24 @@ while len(chess[i]) > 9:
     elif height == len(chess[i]) - 2:
 
         height = 0
-'''
+
 
 print(chess)
+'''
 
 
+size = sys.stdin.readline().split()
+size = [int(i) for i in size]
+bord = [[None for _ in range(size[1])] for _ in range(size[0])]
 
+print()
 
+for i in range(size[0]):
+
+    square = input()
+    bord[i] = square
+
+print(bord)
 
 
 
