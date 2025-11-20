@@ -29,9 +29,12 @@ while len(chess) > 8:
 
         width = 0
 
+<<<<<<< HEAD:Python/Chess - 1018.py
 
 
 
+=======
+>>>>>>> 00e7cacb3847a4509cd75185a83b99f2b161f463:Python/(ing)Chess - 1018.py
 while len(chess[i]) > 9:
 
     

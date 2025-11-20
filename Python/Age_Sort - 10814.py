@@ -3,43 +3,22 @@
 import sys
 
 # 사람들 수 입력
-count = int(sys.stdin.readline())
+count = int(sys.stdin.readline().strip())
 
-age = []    # 나이를 담을 리스트
-name = []    # 이름을 담을 리스트
-total = []    # 최종 리스트
+info = []
 
-# 입력받기
+# 공백을 기준으로 각 변수에 저장하여 리스트에 튜플로 저장
 for i in range(count):
 
-    info = sys.stdin.readline()
-    info = info.split()
-    age.append(info[0])
-    name.append(info[1])
+    age, name = sys.stdin.readline().split()
+    info.append((int(age), name))
 
-# 정렬하기
-for i in range(count):
+# 람다로 info리스트 내 튜플의 0번째 요소를 기준으로 정렬
+info.sort(key=lambda x : x[0])
 
-    head = 0
-    k = 0
-
-    while k <= len(age) - 1:
-
-        if age[head] > age[k]:
-
-            head = k
-
-        k += 1
-
-    total.append(age[head] + " " + name[head])
-    age.pop(head)
-    name.pop(head)
-
-for i in range(len(total)):
-    
-    print(total[i])
-
-
+for i in range(len(info)):
+    print(info[i][0], end = " ")
+    print(info[i][1])
 
 
 
